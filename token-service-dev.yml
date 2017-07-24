@@ -7,9 +7,9 @@ server:
 info: 
   app:
     name: Token Service
-    description=This is Token Server for authentication.
-    version=0.0.1
-    environment=dev
+    description: This is Token Server for authentication.
+    version: 0.0.1
+    environment: dev
 
 management:
   security:
@@ -30,7 +30,7 @@ spring:
     password: guest
 
 eureka:
-  client.service-url.defaultZone=http://localhost:8761/eureka/
+  client.service-url.defaultZone: http://localhost:8761/eureka/
   instance:
     preferIpAddress: true
     statusPageUrlPath: ${server.contextPath}${management.context-path}/info
