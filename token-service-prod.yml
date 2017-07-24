@@ -1,0 +1,38 @@
+message: This is prod config
+
+server:
+  port: 8090
+  contextPath: /token
+
+info: 
+  app:
+    name: Token Service
+    description=This is Token Server for authentication.
+    version=0.0.1
+    environment=prod
+
+management:
+  security:
+    enabled: false
+  context-path: /manage
+
+spring:
+  cloud: 
+    config: 
+      uri: http://localhost:8888
+      username: rich
+      password: 1234
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client.service-url.defaultZone=http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+    statusPageUrlPath: ${server.contextPath}${management.context-path}/info
+    healthCheckUrlPath: ${server.contextPath}${management.context-path}/health
+
