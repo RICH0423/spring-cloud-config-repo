@@ -37,6 +37,6 @@ eureka:
     healthCheckUrlPath: ${server.contextPath}${management.context-path}/health
 
 token:
-  expiration.minutes.expand: 1449
+  expiration.minutes.expand: 1440
   secret.path: /media/data/ssir/Token-Management/key/secret.key
 
